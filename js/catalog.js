@@ -122,11 +122,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       if (btnAdd) {
         btnAdd.addEventListener('click', (ev) => {
-          ev.stopPropagation(); // Важно, чтобы не сработал клик по оверлею (хотя z-index кнопки выше)
+          ev.stopPropagation(); // Предотвращаем клик по карточке
           addToCartById(p.id);
           showToast(`${p.name} добавлен(а) в корзину`);
         });
       }
+
+      // Клик по карточке для перехода на страницу продукта
+      card.addEventListener('click', () => {
+        window.location.href = `product.html?id=${p.id}`;
+      });
 
       container.appendChild(card);
     });

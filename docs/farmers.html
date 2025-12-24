@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Корзина — LocalFarm</title>
+    <title>Фермеры — Farm   Market</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
 <div class="page">
@@ -18,7 +18,7 @@
         <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
         <button class="header__search-btn" aria-label="Поиск">🔍</button>
       </div>
-     
+
       <nav class="header__nav">
       <a href="index.html" class="header__nav-link nav-olive">Главная</a>
       <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
@@ -34,31 +34,14 @@
     </div>
   </header>
 
-<main class="cart page__section">
-    <h1 class="cart__title section-title">Корзина</h1>
+    <main class="farmers page__section">
+    <h1 class="farmers__title">Наши фермеры</h1>
 
-    <!-- Пустая корзина -->
-    <div class="cart__empty" id="cart-empty">
-        <p class="cart__empty-text">Ваша корзина пока пуста.</p>
-        <a href="catalog.html" class="cart__empty-button">Перейти в каталог</a>
-    </div>
-
-    <!-- Контент корзины -->
-    <div class="cart__content" id="cart-content">
-        <ul class="cart__list"></ul>
-
-        <div class="cart__summary">
-            <div class="cart__promo">
-                <input type="text" id="promo-code" placeholder="Введите промокод" class="cart__promo-input">
-                <button class="cart__promo-button">Применить</button>
-            </div>
-            <p class="cart__summary-text">Итого: <span id="cart-total">0 ₽</span></p>
-            <button class="cart__order-button">Оформить заказ</button>
-        </div>
-    </div>
+    <section class="farmers-list" id="farmers-list">
+    
+    </section>
 </main>
-
- <footer class="footer">
+     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -97,7 +80,7 @@
         </div>
     </footer>
 </div>
-    <script src="../js/common.js" defer></script>
-    <script src="../js/cart.js"></script>
+<script src="../js/common.js" defer></script>
+<script src="../js/farmers.js"></script>
 </body>
 </html>

@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Обратная связь — Farm Market</title>
+    <title>Корзина — LocalFarm</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
 <div class="page">
-   <header class="header">
+  <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">
-        
-        Farm Market
-      </a>
+      <a href="index.html" class="logo">Farm Market</a>
 
       <div class="header__search-wrapper">
         <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
         <button class="header__search-btn" aria-label="Поиск">🔍</button>
       </div>
-
-        <nav class="header__nav">
+     
+      <nav class="header__nav">
       <a href="index.html" class="header__nav-link nav-olive">Главная</a>
       <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
       <a href="farmers.html" class="header__nav-link nav-olive">Фермеры</a>
@@ -37,45 +34,31 @@
     </div>
   </header>
 
-    <main class="feedback page__section">
-        <!-- Hero блок -->
-        <section class="feedback__hero">
-            <div class="container">
-                <h1 class="feedback__title">Обратная связь</h1>
-                <p class="feedback__subtitle">Мы всегда рады услышать ваше мнение и предложения</p>
+<main class="cart page__section">
+    <h1 class="cart__title section-title">Корзина</h1>
+
+    <!-- Пустая корзина -->
+    <div class="cart__empty" id="cart-empty">
+        <p class="cart__empty-text">Ваша корзина пока пуста.</p>
+        <a href="catalog.html" class="cart__empty-button">Перейти в каталог</a>
+    </div>
+
+    <!-- Контент корзины -->
+    <div class="cart__content" id="cart-content">
+        <ul class="cart__list"></ul>
+
+        <div class="cart__summary">
+            <div class="cart__promo">
+                <input type="text" id="promo-code" placeholder="Введите промокод" class="cart__promo-input">
+                <button class="cart__promo-button">Применить</button>
             </div>
-        </section>
-
-        <div class="container">
-            <!-- Форма обратной связи -->
-            <section class="feedback__form-section">
-                <div class="feedback__form-container">
-                    <h2 class="feedback__form-title">Свяжитесь с нами</h2>
-                    <form class="feedback__form" action="#" method="post">
-                        <div class="feedback__form-group">
-                            <label for="name" class="feedback__label">Имя *</label>
-                            <input type="text" id="name" name="name" class="feedback__input" required>
-                        </div>
-                        <div class="feedback__form-group">
-                            <label for="email" class="feedback__label">Email *</label>
-                            <input type="email" id="email" name="email" class="feedback__input" required>
-                        </div>
-                        <div class="feedback__form-group">
-                            <label for="subject" class="feedback__label">Тема</label>
-                            <input type="text" id="subject" name="subject" class="feedback__input">
-                        </div>
-                        <div class="feedback__form-group">
-                            <label for="message" class="feedback__label">Сообщение *</label>
-                            <textarea id="message" name="message" class="feedback__textarea" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="feedback__submit btn btn--primary">Отправить сообщение</button>
-                    </form>
-                </div>
-            </section>
+            <p class="cart__summary-text">Итого: <span id="cart-total">0 ₽</span></p>
+            <button class="cart__order-button">Оформить заказ</button>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer class="footer">
+ <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -114,6 +97,7 @@
         </div>
     </footer>
 </div>
-<script src="../js/common.js" defer></script>
+    <script src="../js/common.js" defer></script>
+    <script src="../js/cart.js"></script>
 </body>
 </html>
