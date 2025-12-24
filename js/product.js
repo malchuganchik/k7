@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addToCartBtn = document.getElementById('add-to-cart');
 
-    fetch('../data/products.json')
+    fetch('./data/products.json')
     .then(res => res.json())
     .then(products => {
         // если id не передан в URL, берём первый товар как дефолт

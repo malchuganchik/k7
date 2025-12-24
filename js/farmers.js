@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("farmers-list");
 
-    fetch("../data/farmers.json")
+    fetch("./data/farmers.json")
         .then(res => res.json())
         .then(farmers => {
             farmers.forEach(farmer => {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 card.innerHTML = `
                     <div class="farmer-card__photo">
-                        <img src="../${farmer.image}" alt="${farmer.name}">
+                        <img src="./${farmer.image}" alt="${farmer.name}">
                     </div>
 
                     <div class="farmer-card__content">
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Функция для показа подробностей фермера
 function showFarmerDetails(farmerName) {
-    fetch('../data/farmers.json')
+    fetch('./data/farmers.json')
         .then(res => res.json())
         .then(farmers => {
             const farmer = farmers.find(f => f.name === farmerName);
@@ -66,7 +66,7 @@ function showFarmerDetails(farmerName) {
                         <div class="details-modal__body">
                             <div class="details-modal__header">
                                 <div class="details-modal__photo">
-                                    <img src="../${farmer.image}" alt="${farmer.name}">
+                                    <img src="./${farmer.image}" alt="${farmer.name}">
                                 </div>
                                 <div class="details-modal__info">
                                     <h3>${farmer.name}</h3>
@@ -114,4 +114,3 @@ function showFarmerDetails(farmerName) {
         .catch(err => console.error("Ошибка загрузки данных фермера:", err));
 }
 });
-

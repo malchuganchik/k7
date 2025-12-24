@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let products = [];
 
   try {
-  const res = await fetch('../data/products.json');
+  const res = await fetch('./data/products.json');
   products = await res.json();
     
     // Проверка URL параметра поиска перед рендером

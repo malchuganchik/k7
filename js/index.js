@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Загрузка популярных товаров
     (async () => {
         try {
-            const response = await fetch("../data/products.json");
+            const response = await fetch("./data/products.json");
             const products = await response.json();
 
             const container = document.querySelector(".products__grid");

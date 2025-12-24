@@ -72,7 +72,7 @@ function getSeasonKeyFromDate(d = new Date()) {
 async function ensureProductsIndex() {
     if (Object.keys(productsIndex).length > 0 && rawProducts.length > 0) return;
     try {
-        const res = await fetch('../data/products.json');
+        const res = await fetch('./data/products.json');
         rawProducts = await res.json();
         productsIndex = {};
         rawProducts.forEach(p => { productsIndex[p.id] = p; });

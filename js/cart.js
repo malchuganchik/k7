@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let discount = 0; // скидка в процентах
 
     try {
-    const res = await fetch('../data/products.json');
+    const res = await fetch('./data/products.json');
         products = await res.json();
     } catch (e) {
         console.error('Не удалось загрузить товары', e);
