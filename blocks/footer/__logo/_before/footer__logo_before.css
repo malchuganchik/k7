@@ -1,0 +1,18 @@
+/* Modified to be inline with text if possible, or just removing it if we move it to HTML */
+/* User asked to "combine" the sign above with the text. */
+/* The sign above is this :before element. */
+/* To combine, we can make .footer-logo display flex row or just let this be the icon. */
+
+/* Actually, the user likely wants the leaf NEXT to the text "Farm Market", not above. */
+/* Currently .footer-logo is flex-col. */
+
+.footer-logo:before {
+    display: none; /* Hiding the old pseudo-element to move it into the brand block properly or restyle it */
+}
+
+/* We will add the leaf directly to the brand block in CSS or HTML to ensure alignment */
+.footer-logo__brand:before {
+    content: '🍃';
+    font-size: 28px;
+    margin-right: 5px;
+}

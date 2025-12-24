@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Страница товара — LocalFarm</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../main.css" />
+</head>
+<body class="product-page">
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Farm Market</a>
+    
+    <div class="header__search-wrapper">
+      <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
+      <button class="header__search-btn" aria-label="Поиск">🔍</button>
+    </div>
+    
+     <nav class="header__nav">
+      <a href="index.html" class="header__nav-link nav-olive">Главная</a>
+      <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
+      <a href="farmers.html" class="header__nav-link nav-olive">Фермеры</a>
+      <a href="about.html" class="header__nav-link nav-olive">О рынке</a>
+      <a href="cart.html" class="header__nav-link nav-olive">🛒 Корзина</a>
+    </nav>
+  </div>
+</header>
+
+<main class="product-container container">
+    <div class="product-content">
+        <img id="product-img" class="product-main-img" alt="product image" />
+        <div class="product-info">
+            <h1 id="product-name">Мандарины Абхазские</h1>
+            <p class="product-price" id="product-price">996</p>
+            <p><b>Сезонность:</b> <span id="product-season">Осень-Зима</span></p>
+            <p><b>Фермер:</b> <span id="product-farmer">Ферма "Солнечная долина"</span></p>
+            <p><b>Хранение:</b> <span id="product-storage">При температуре +4...+8°C</span></p>
+            <p><b>Срок годности:</b> <span id="product-shelf-life">7 дней</span></p>
+            <p><b>Приготовление:</b> <span id="product-cooking">Употреблять в свежем виде</span></p>
+            <div class="product-actions">
+              <button class="btn" id="add-to-cart">🛒 Добавить в корзину</button>
+              <button class="btn-outline" id="open-farmer-modal">🏡 О фермере</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="reviews-section">
+    <h3>Оставить отзыв</h3>
+    <form id="review-form" class="review-form">
+        <input type="text" id="review-name" placeholder="Ваше имя" required />
+        <div class="rating">
+            <label>Оценка:</label>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+        </div>
+        <textarea id="review-text" placeholder="Ваш отзыв" required></textarea>
+        <button type="submit" class="btn">⭐ Отправить отзыв</button>
+    </form>
+
+    <h2>Отзывы покупателей</h2>
+    <div id="reviews-list" class="reviews-list">
+        <!-- Отзывы подгружаются через JS -->
+    </div>
+</section>
+</main>
+
+
+
+ <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo__brand">
+                        Farm Market
+                    </div>
+                    
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="farmers.html">Фермеры</a>
+                    <a href="about.html">О рынке</a>
+                    <a href="cart.html">Корзина</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Тирасполь</p>
+                    <p><i class="fas fa-phone"></i> +373 777 73 377</p>
+                    <p><i class="fas fa-envelope"></i> info@farmmarket.md</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 8:00-15:00</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer-social__links">
+                        <a href="https://t.me/" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://instagram.com/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Farm Market — Учебный  проект  Орлов Никита 301  ПГУ</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="../js/common.js" defer></script>
+<script src="../js/product.js"></script>
+<script src="../js/otzivi.js"></script>
+</body>
+</html>

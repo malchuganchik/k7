@@ -1,0 +1,36 @@
+.header__nav-link {
+    /* Сделать ссылки заметными по умолчанию — цвет акцента на фоне фиолетового хедера */
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.2s ease, transform 0.18s ease;
+}
+
+/* Hover делает ссылку чуть ярче и поднимает */
+.header__nav-link:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Активная ссылка — подчеркивание градиентом */
+.header__nav-link--active {
+    color: var(--primary);
+}
+.header__nav-link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,var(--primary),var(--primary-600));
+    border-radius: 3px;
+}
+
+/* На мобильном меню (фон белый) — делаем ссылки тёмными для контраста */
+@media (max-width: 768px) {
+    .header__nav-link { color: var(--dark); }
+    .header__nav-link--active { color: var(--primary); }
+}

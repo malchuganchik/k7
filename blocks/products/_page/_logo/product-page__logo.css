@@ -1,0 +1,15 @@
+.header .logo {
+    font-family: var(--font-header);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .logo:before {
+    content: '🍃';
+    font-size: 26px;
+}

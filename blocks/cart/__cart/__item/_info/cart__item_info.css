@@ -1,0 +1,19 @@
+
+
+.cart__item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart__item-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #1B5E20;
+}
+
+.cart__item-info p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}

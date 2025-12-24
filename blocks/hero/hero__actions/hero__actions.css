@@ -1,0 +1,5 @@
+.hero__actions { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+    .hero__actions { flex-direction: column; width: 100%; }
+}

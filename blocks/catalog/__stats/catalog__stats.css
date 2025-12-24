@@ -1,0 +1,17 @@
+
+.catalog-stats {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+.catalog-stats span {
+    font-weight: 700;
+    color: #2E7D32;
+    font-size: 18px;
+}

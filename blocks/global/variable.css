@@ -1,0 +1,29 @@
+:root {
+
+    --primary: #7dae7f; 
+    --primary-600: #7c3aed;
+    --accent: #0f0f02; 
+    --muted: #6b6b83;
+    --dark: #0b1220;
+    --light: #ffffff;
+    --bg: linear-gradient(180deg,#fbf7ff,#f3e8ff); 
+    --card-bg: linear-gradient(180deg,#ffffff,#fbf7ff);
+    --bg-light: rgba(255,255,255,0.9);
+    --secondary: #2E7D32; 
+    --nav-bg: linear-gradient(90deg, rgba(76,175,80,0.95), rgba(46,125,50,0.95));
+
+    --font-header: 'Poppins', sans-serif;
+    --font-text: 'Inter', sans-serif;
+
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+    --shadow-hover: 0 20px 50px rgba(99, 102, 241, 0.12);
+
+    --space-xs: 6px;
+    --space-s: 12px;
+    --space-m: 18px;
+    --space-l: 32px;
+    --space-xl: 48px;
+}
+

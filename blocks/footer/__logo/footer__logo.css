@@ -1,0 +1,24 @@
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center content to match the pseudo-element leaf if it's block-like, or text-align */
+}
+
+.footer-logo__brand {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    /* The leaf is added via :before on .footer-logo in footer__logo_before.css */
+    /* If the user wants to "combine" it, we might need to move the text into the same flow or adjust the pseudo-element */
+}
+
+.footer-logo p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 0;
+    font-weight: 400;
+}

@@ -1,0 +1,16 @@
+.filters__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2C3E50;
+    padding-top: 10px;
+    position: relative;
+}
+
+
+
+@media (max-width: 480px) {
+    .filters__title {
+        font-size: 20px;
+    }
+}

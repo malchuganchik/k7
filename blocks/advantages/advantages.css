@@ -1,0 +1,12 @@
+.advantages { padding: 60px 0; background-image: url('../../img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; z-index: 1; }
+
+@media (max-width: 1024px) { .advantages__grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) { 
+    .advantages__grid { grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .advantage-card { padding: 30px 20px; }
+    .advantage-card__icon { font-size: 48px; }
+}
+@media (max-width: 480px) {
+    .advantages__grid { grid-template-columns: 1fr; gap: 15px; }
+    .advantage-card { padding: 25px 20px; }
+}

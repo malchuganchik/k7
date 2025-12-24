@@ -1,0 +1,23 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 75%;
+    max-width: none;
+    margin: 0 auto; /* Center it */
+}
+@media (max-width: 1024px) {
+    .header__inner {
+        width: 90%;
+        padding: 15px 20px;
+    }
+}
+@media (max-width: 480px) {
+    .header__inner { 
+        width: 100%;
+        padding: 10px 15px;
+    }
+}

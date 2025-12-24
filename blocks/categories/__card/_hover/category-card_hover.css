@@ -1,0 +1,2 @@
+.category-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(46,125,50,0.2); border-color: #2E7D32; }
+.category-card:hover  { transform: scale(1.1); }

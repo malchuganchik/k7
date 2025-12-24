@@ -1,0 +1,23 @@
+.filters__reset {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1E88E5, #1565C0);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.4);
+}
+
+.filters__reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(21, 101, 192, 0.5);
+}
+
+.filters__reset:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 9px rgba(21, 101, 192, 0.45);
+}

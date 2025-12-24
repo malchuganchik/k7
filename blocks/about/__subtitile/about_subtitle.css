@@ -1,0 +1,7 @@
+.about__subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--font-text);
+}

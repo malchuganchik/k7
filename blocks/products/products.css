@@ -1,0 +1,48 @@
+.products {
+    position: relative;
+    z-index: 1;
+    padding: 28px 0 48px;
+    background: linear-gradient(180deg, rgba(247,240,255,0.6), rgba(243,232,255,0.4));
+}
+
+
+.products__grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* single column by default — prevents empty left column when no promo */
+    gap: 20px;
+    align-items: start;
+    padding: 18px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(250,245,255,0.6));
+    box-shadow: 0 10px 30px rgba(124,58,237,0.04);
+    border: 1px solid rgba(124,58,237,0.06);
+}
+
+/* If a promo column is present, add class .with-promo to enable two-column layout */
+.products__grid-wrapper.with-promo {
+    grid-template-columns: 320px 1fr;
+}
+
+.products__promo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.promo-card {
+    background: linear-gradient(135deg,var(--primary),var(--primary-600));
+    color: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 12px 30px rgba(124,58,237,0.12);
+}
+
+.promo-card h4 { margin: 0 0 8px; font-size: 18px; }
+.promo-card p { margin: 0; opacity: 0.95; }
+
+@media (max-width: 900px) {
+    .products__grid-wrapper { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) { .products__grid { grid-template-columns: repeat(2,1fr); } .products__title { font-size: 32px; margin-bottom: 30px; } }
+@media (max-width: 768px) { .products__grid { grid-template-columns: repeat(2,1fr); gap: 20px; } .products__title { font-size: 28px; margin-bottom: 30px; } }
+@media (max-width: 480px) { .products__grid { grid-template-columns: 1fr; gap: 15px; max-width: 100%; margin: 0 auto; } .products__title { font-size: 28px; margin-bottom: 25px; } }

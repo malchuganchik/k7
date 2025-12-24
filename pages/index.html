@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalFarm — Фермерский рынок</title>
+
+    <!-- Fonts: modern sans stack -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main.css" />
+</head>
+<body>
+<div class="page">
+
+
+    <!-- Header -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Farm Market</a>
+
+    
+
+    <div class="header__search-wrapper">
+      <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
+      <button class="header__search-btn" aria-label="Поиск">🔍</button>
+    </div>
+
+    <nav class="header__nav">
+      <a href="index.html" class="header__nav-link nav-olive">Главная</a>
+      <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
+      <a href="farmers.html" class="header__nav-link nav-olive">Фермеры</a>
+      <a href="about.html" class="header__nav-link nav-olive">О рынке</a>
+      <a href="feedback.html" class="header__nav-link nav-olive">Обратная связь</a>
+      <a href="cart.html" class="header__nav-link nav-olive">🛒 Корзина</a>
+    </nav>
+
+    <button class="header__burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero--large">
+        <div class="container hero__inner">
+            <div class="hero__left">
+                <h1 class="hero__title">Еда, которой можно доверять</h1>
+                <p class="hero__subtitle">Свежие продукты от местных фермеров — напрямую с рынка к вашему столу.</p>
+                <div class="hero__actions">
+                    <a href="catalog.html" class="btn btn--primary">Перейти в каталог</a>
+                    <a href="about.html" class="btn btn--primary">О рынке</a>
+                </div>
+            </div>
+            <div class="hero__right">
+                <div class="hero__media">
+                    <img src="../img/farm.png" alt="Фермерские продукты">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Категории товаров</h2>
+            <div class="categories__grid">
+                <a href="catalog.html?type=vegetables" class="category-card category-card--tile">
+                    <div class="category-card__media" style="background-image:url('../img/ovochi.jpg')"></div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Овощи</h3>
+                        <p class="category-card__desc">Свежие овощи с грядки</p>
+                    </div>
+                </a>
+                <a href="catalog.html?type=fruits" class="category-card category-card--tile">
+                    <div class="category-card__media" style="background-image:url('../img/frrikti.jpg')"></div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Фрукты</h3>
+                        <p class="category-card__desc">Сочные и спелые фрукты</p>
+                    </div>
+                </a>
+                <a href="catalog.html?type=dairy" class="category-card category-card--tile">
+                    <div class="category-card__media" style="background-image:url('../img/molochnoe.jpg')"></div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Молочное</h3>
+                        <p class="category-card__desc"> Молочные продукты</p>
+                    </div>
+                </a>
+                <a href="catalog.html?type=meat" class="category-card category-card--tile">
+                    <div class="category-card__media" style="background-image:url('../img/myaso.jpg')"></div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Мясное</h3>
+                        <p class="category-card__desc">Качественное мясо</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages__grid">
+                <div class="advantage-card">
+                    <div class="advantage-card__icon"><img src="https://img.icons8.com/?size=50&id=8290&format=png" alt="Icon"></div>
+                    <h3 class="advantage-card__title">Быстрая доставка</h3>
+                    <p class="advantage-card__desc">Доставка на следующий день</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon"><img src="https://img.icons8.com/?size=50&id=2965&format=png" alt="Icon"></div>
+                    <h3 class="advantage-card__title">100% органические</h3>
+                    <p class="advantage-card__desc">Без химии и ГМО</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon"><img src="https://img.icons8.com/?size=50&id=8412&format=png" alt="Icon"></div>
+                    <h3 class="advantage-card__title">Лучшие цены</h3>
+                    <p class="advantage-card__desc">Прямо от производителя</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon"><img src="https://img.icons8.com/?size=50&id=23546&format=png" alt="Icon"></div>
+                    <h3 class="advantage-card__title">Гарантия качества</h3>
+                    <p class="advantage-card__desc">Свежесть гарантирована</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="products">
+        <div class="container">
+            <h2 class="products__title">Популярные товары</h2>
+            <div class="products__grid-wrapper">
+                <div class="products__grid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="season-calendar">
+    <div class="container">
+        <h2 class="season-title">Сезонный календарь</h2>
+        <div class="seasons">
+            <div class="season-card winter" data-season="winter">
+                <img class="season-icon" src="https://img.icons8.com/?size=80&id=wnXN746H7YrX&format=png" alt="Зима"> Зима
+            </div>
+            <div class="season-card spring" data-season="spring">
+                <img class="season-icon" src="https://img.icons8.com/?size=48&id=19656&format=png" alt="Весна"> Весна
+            </div>
+            <div class="season-card summer" data-season="summer">
+                <img class="season-icon" src="https://img.icons8.com/?size=80&id=hPgLrdD9eLiu&format=png" alt="Лето"> Лето
+            </div>
+            <div class="season-card autumn" data-season="autumn">
+                <img class="season-icon" src="https://img.icons8.com/?size=48&id=18510&format=png" alt="Осень"> Осень
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Модальное окно -->
+<div class="season-modal" id="seasonModal">
+    <div class="season-modal__content">
+        <span class="close-modal">&times;</span>
+        <h3 id="modalTitle"></h3>
+
+        <h4>Доступные продукты:</h4>
+        <ul id="productList"></ul>
+
+        <h4>Диаграмма сезона:</h4>
+   <canvas id="seasonChart" class="seasonChart"></canvas>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/calendar.js"></script>
+
+
+
+
+    <!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo__brand">
+                        Farm Market
+                    </div>
+                    
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="farmers.html">Фермеры</a>
+                    <a href="about.html">О рынке</a>
+                    <a href="feedback.html">Обратная связь</a>
+                    <a href="cart.html">Корзина</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Тирасполь</p>
+                    <p><i class="fas fa-phone"></i> +373 777 73 377</p>
+                    <p><i class="fas fa-envelope"></i> info@farmmarket.md</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 8:00-15:00</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer-social__links">
+                        <a href="https://t.me/" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://instagram.com/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Farm Market — Учебный  проект  Орлов Никита 301  ПГУ</p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+<!-- JS -->
+<script src="../js/common.js" defer></script>
+<script src="../js/cart.js" defer></script>
+<script src="../js/index.js"></script>
+
+
+</body>
+</html>

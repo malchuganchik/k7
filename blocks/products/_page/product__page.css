@@ -1,0 +1,358 @@
+.product-page {
+    min-height: 100vh;
+    padding: 0;
+}
+
+.product-main-img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15);
+    background: linear-gradient(135deg, #f8f9fa, #f0f4ff);
+    padding: 30px;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(139, 92, 246, 0.1);
+}
+
+.product-main-img:hover {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 0 20px 50px rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.product-info {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(139, 92, 246, 0.1);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.product-info::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(139,92,246,0.4), rgba(255,193,7,0.3), rgba(76,175,80,0.2));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    z-index: -1;
+}
+
+.product-info h1 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.product-price {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 20px 0 25px;
+}
+
+.product-info p {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 25px;
+}
+
+.product-info p b {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Кнопки */
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+#add-to-cart {
+    flex: 1;
+    min-width: 200px;
+    padding: 18px 30px;
+    background: linear-gradient(135deg, var(--accent), #fb7185);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+}
+
+#add-to-cart:hover {
+    background: linear-gradient(135deg, var(--primary), var(--primary-600));
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(139, 92, 246, 0.4);
+}
+
+#open-farmer-modal {
+    padding: 16px 25px;
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#open-farmer-modal:hover {
+    background: var(--primary-600);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.reviews-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 18px 45px rgba(139, 92, 246, 0.1);
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.reviews-section::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(139,92,246,0.4), rgba(255,193,7,0.3), rgba(76,175,80,0.2));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    z-index: -1;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.review-item {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    background: #fafafa;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.review-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.review-rating {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.review-author {
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+}
+
+.review-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.review-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Рейтинг */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.stars input:checked ~ label,
+.stars input:checked + label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: var(--primary);
+}
+
+/* Форма отзыва */
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.review-form input,
+.review-form textarea {
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: var(--font-text);
+    transition: all 0.3s;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.review-form button[type="submit"] {
+    padding: 15px 35px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-600));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+.review-form button[type="submit"]:hover {
+    background: linear-gradient(135deg, var(--primary-600), #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Модальное окно фермера */
+#farmer-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+}
+
+#farmer-modal:not(.hidden) {
+    display: flex;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(139, 92, 246, 0.2);
+    position: relative;
+    animation: modalAppear 0.3s ease;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #ff3333;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-container { padding: 20px 15px; }
+    .product-main-img { height: 300px; padding: 20px; }
+    .product-info { padding: 20px; }
+    .product-info h1 { font-size: 26px; }
+    .product-price { font-size: 32px; }
+    .product-actions { flex-direction: column; }
+    #add-to-cart,
+    #open-farmer-modal { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .product-content { gap: 30px; }
+    .product-main-img { height: 250px; padding: 15px; }
+    .product-info h1 { font-size: 22px; }
+    .product-price { font-size: 28px; }
+    .reviews-section h2 { font-size: 22px; }
+}

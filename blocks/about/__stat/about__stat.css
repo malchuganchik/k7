@@ -1,0 +1,27 @@
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about__stat {
+    text-align: center;
+    padding: 20px;
+    background: #C8E6C9;
+    border-radius: 8px;
+}
+
+.about__stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-family: var(--font-header);
+}
+
+.about__stat-label {
+    color: var(--text);
+    font-weight: 500;
+    font-family: var(--font-text);
+}

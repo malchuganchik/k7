@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог продукции — LocalFarm</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../blocks/filters/__button/filters__button.css" />
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+     <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Farm Market</a>
+
+      <div class="header__search-wrapper">
+        <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
+        <button class="header__search-btn" aria-label="Поиск">🔍</button>
+      </div>
+
+        <nav class="header__nav">
+      <a href="index.html" class="header__nav-link nav-olive">Главная</a>
+      <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
+      <a href="farmers.html" class="header__nav-link nav-olive">Фермеры</a>
+      <a href="about.html" class="header__nav-link nav-olive">О рынке</a>
+      <a href="feedback.html" class="header__nav-link nav-olive">Обратная связь</a>
+      <a href="cart.html" class="header__nav-link nav-olive">🛒 Корзина</a>
+    </nav>
+
+      <button class="header__burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+        <!-- Main -->
+        <main class="catalog page__section">
+            <div class="catalog-hero">
+                <div class="container">
+                    <h1 class="catalog__title section-title">Каталог продукции</h1>
+                    <p class="catalog__subtitle">Выберите свежие фермерские продукты из нашего ассортимента</p>
+                </div>
+            </div>
+            
+            <!-- Счетчик товаров -->
+            <div class="catalog-stats">
+                <span id="products-count">0</span> товаров
+            </div>
+
+            <!-- Filters -->
+            <aside class="catalog__filters">
+                <h2 class="filters__title">Фильтры</h2>
+
+                <div class="filters__group">
+                    <h3 class="filters__subtitle">Тип продукции</h3>
+                    <label><input type="checkbox" name="type" value="vegetables"> Овощи</label>
+                    <label><input type="checkbox" name="type" value="fruits"> Фрукты</label>
+                    <label><input type="checkbox" name="type" value="dairy"> Молочное</label>
+                    <label><input type="checkbox" name="type" value="meat"> Мясное</label>
+                </div>
+
+                 <div class="filters__group">
+                    <h3 class="filters__subtitle">Метод выращивания</h3>
+                    <label><input type="checkbox" name="method" value="Органические"> Органические</label>
+                    <label><input type="checkbox" name="method" value="Без пестицидов"> Без пестицидов</label>
+                    <label><input type="checkbox" name="method" value="Биодинамические"> Биодинамические</label>
+                </div>
+
+                <div class="filters__group">
+                    <h3 class="filters__subtitle">Сезон</h3>
+                    <button id="season-filter" class="filters__button">Только в сезоне</button>
+                </div>
+
+                <div class="filters__group">
+                    <h3 class="filters__subtitle">Сортировка</h3>
+                    <select id="sort-select">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">Цена ↑</option>
+                        <option value="price-desc">Цена ↓</option>
+                        <option value="alpha-asc">А-Я</option>
+                        <option value="alpha-desc">Я-А</option>
+                        <option value="location-asc">Место выращивания А-Я</option>
+                        <option value="location-desc">Место выращивания Я-А</option>
+                    </select>
+                </div>
+
+                <button id="reset-filters" class="filters__reset">Сбросить фильтры</button>
+            </aside>
+
+            <!-- Catalog Grid -->
+            <section class="catalog__grid" id="catalog-grid">
+                <!-- JS вставит карточки -->
+            </section>
+        </main>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo__brand">
+                        Farm Market
+                    </div>
+                    
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="farmers.html">Фермеры</a>
+                    <a href="about.html">О рынке</a>
+                    <a href="feedback.html">Обратная связь</a>
+                    <a href="cart.html">Корзина</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Тирасполь</p>
+                    <p><i class="fas fa-phone"></i> +373 777 73 377</p>
+                    <p><i class="fas fa-envelope"></i> info@farmmarket.md</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 8:00-15:00</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer-social__links">
+                        <a href="https://t.me/" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://instagram.com/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Farm Market — Учебный  проект  Орлов Никита 301  ПГУ</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="../js/common.js" defer></script>
+    <script src="../js/catalog.js" defer></script>
+</body>
+</html>

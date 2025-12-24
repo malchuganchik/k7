@@ -1,0 +1,66 @@
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Seasonal Animations */
+@keyframes winterShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+}
+@keyframes springBloom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+@keyframes summerShine {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes autumnFall {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(5px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.season-calendar { padding: 60px 20px; position: relative; z-index: 1; }
+.season-title { text-align: center; font-size: 42px; margin-bottom: 40px; font-family: var(--font-header); color: #2C3E50; letter-spacing: 1px; position: relative; padding-bottom: 20px; }
+.season-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: linear-gradient(90deg,#2E7D32,#4CAF50); border-radius: 2px; }
+
+.seasons { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 25px; }
+.season-card { padding: 40px 25px; color: white; font-size: 22px; font-weight: 700; border-radius: 20px; text-align: center; cursor: pointer; transform: perspective(700px) translateZ(0); transition: transform 0.35s ease, box-shadow 0.35s ease; opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
+.season-card:hover { transform: perspective(700px) translateZ(25px) scale(1.05); box-shadow: none; }
+
+.season-icon { display: inline-block; margin-right: 8px; width: 48px; height: 48px; vertical-align: middle; }
+
+.winter { background: linear-gradient(135deg,#6EC6FF,#1E88E5); }
+.winter .season-icon { animation: winterShake 2s infinite ease-in-out; }
+
+.spring { background: linear-gradient(135deg,#4CAF50,#2E7D32); }
+.spring .season-icon { animation: springBloom 3s infinite ease-in-out; }
+
+.summer { background: linear-gradient(135deg,#FFE082,#F9A825); }
+.summer .season-icon { animation: summerShine 4s infinite linear; }
+
+.autumn { background: linear-gradient(135deg,#FFB74D,#E65100); }
+.autumn .season-icon { animation: autumnFall 3s infinite ease-in-out; }
+
+.season-modal { display: none; justify-content: center; align-items: center; position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); z-index:1000; }
+
+.season-modal__content { background-color:#fff; padding:20px; border-radius:10px; max-width:500px; width:90%; box-shadow:0 5px 15px rgba(0,0,0,0.3); text-align:center; }
+.season-modal__content h3, .season-modal__content h4, .season-modal__content ul, .season-modal__content canvas { margin: 10px 0; }
+
+.season-card__badge {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	background: rgba(0,0,0,0.15);
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 999px;
+	font-weight: 700;
+	font-size: 12px;
+    display: none; /* Hide by default, shown via JS if count > 0 */
+}
+
+@media (max-width: 1024px) { .seasons { grid-template-columns: repeat(2,1fr); } .season-title { font-size: 32px; margin-bottom: 30px; } }
+@media (max-width: 768px) { .seasons { grid-template-columns: repeat(2,1fr); } .season-card { padding: 30px 20px; min-height: 150px; } .season-title { font-size: 28px; margin-bottom: 30px; } }
+@media (max-width: 480px) { .seasons { grid-template-columns: 1fr; max-width: 100%; margin: 0 auto; } .season-card { padding: 25px 15px; font-size: 18px; } .season-title { font-size: 28px; margin-bottom: 25px; } }

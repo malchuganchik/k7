@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина — LocalFarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main.css" />
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Farm Market</a>
+
+      <div class="header__search-wrapper">
+        <input type="text" class="header__search" placeholder="Поиск товаров..." id="header-search">
+        <button class="header__search-btn" aria-label="Поиск">🔍</button>
+      </div>
+     
+      <nav class="header__nav">
+      <a href="index.html" class="header__nav-link nav-olive">Главная</a>
+      <a href="catalog.html" class="header__nav-link nav-olive">Каталог</a>
+      <a href="farmers.html" class="header__nav-link nav-olive">Фермеры</a>
+      <a href="about.html" class="header__nav-link nav-olive">О рынке</a>
+      <a href="feedback.html" class="header__nav-link nav-olive">Обратная связь</a>
+      <a href="cart.html" class="header__nav-link nav-olive">🛒 Корзина</a>
+    </nav>
+
+      <button class="header__burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<main class="cart page__section">
+    <h1 class="cart__title section-title">Корзина</h1>
+
+    <!-- Пустая корзина -->
+    <div class="cart__empty" id="cart-empty">
+        <p class="cart__empty-text">Ваша корзина пока пуста.</p>
+        <a href="catalog.html" class="cart__empty-button">Перейти в каталог</a>
+    </div>
+
+    <!-- Контент корзины -->
+    <div class="cart__content" id="cart-content">
+        <ul class="cart__list"></ul>
+
+        <div class="cart__summary">
+            <div class="cart__promo">
+                <input type="text" id="promo-code" placeholder="Введите промокод" class="cart__promo-input">
+                <button class="cart__promo-button">Применить</button>
+            </div>
+            <p class="cart__summary-text">Итого: <span id="cart-total">0 ₽</span></p>
+            <button class="cart__order-button">Оформить заказ</button>
+        </div>
+    </div>
+</main>
+
+ <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo__brand">
+                        Farm Market
+                    </div>
+                    
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="farmers.html">Фермеры</a>
+                    <a href="about.html">О рынке</a>
+                    <a href="feedback.html">Обратная связь</a>
+                    <a href="cart.html">Корзина</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Тирасполь</p>
+                    <p><i class="fas fa-phone"></i> +373 777 73 377</p>
+                    <p><i class="fas fa-envelope"></i> info@farmmarket.md</p>
+                    <p><i class="fas fa-clock"></i> Сб-Вс: 8:00-15:00</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer-social__links">
+                        <a href="https://t.me/" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://instagram.com/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Farm Market — Учебный  проект  Орлов Никита 301  ПГУ</p>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="../js/common.js" defer></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

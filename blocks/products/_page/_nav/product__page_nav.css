@@ -1,0 +1,16 @@
+.product-page__nav {
+    display: flex;
+    gap: 30px;
+}
+
+.product-page__nav-link {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.product-page__nav-link:hover {
+    color: var(--primary);
+}

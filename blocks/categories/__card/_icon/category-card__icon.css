@@ -1,0 +1,2 @@
+.category-card__icon { font-size: 64px; margin-bottom: 20px; transition: transform 0.3s ease; }
+.category-card__icon { transform: scale(1.1); }

@@ -1,0 +1,15 @@
+.cart__order-button {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #2E7D32, #1B5E20);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.cart__order-button:hover {
+    transform: translateY(-3px);
+}

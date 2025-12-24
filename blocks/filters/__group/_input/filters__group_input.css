@@ -1,0 +1,8 @@
+
+.filters__group input {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: #2E7D32;
+}

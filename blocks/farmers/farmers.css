@@ -1,0 +1,67 @@
+.farmers {
+    max-width: 1400px;
+    margin: 0 auto 70px;
+    padding: 40px 24px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.farmers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.farmers__title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.farmers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .farmers {
+        padding-inline: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .farmer-card {
+        flex-direction: column;
+        max-height: none;
+        min-height: 0;
+    }
+
+    .farmer-card__side-decor {
+        width: 100%;
+        min-width: 0;
+        padding: 24px 26px 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .farmer-card__content {
+        padding: 26px 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .farmers {
+        padding: 28px 14px 60px;
+    }
+
+    .farmer-card__content {
+        padding-inline: 20px;
+    }
+
+    .farmer-card__photo {
+        width: 170px;
+        height: 170px;
+    }
+}

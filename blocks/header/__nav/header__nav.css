@@ -1,0 +1,19 @@
+.header__nav { display: flex; gap: 30px; }
+@media (max-width: 1024px) { .header__search-wrapper { max-width: 300px; } }
+@media (max-width: 768px) {
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background-color: white;
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        transition: 0.3s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1001;
+    }
+      .header__nav--active { right: 0; }
+    .header__burger { display: flex; z-index: 1002; }
+}

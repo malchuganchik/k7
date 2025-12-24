@@ -1,0 +1,6 @@
+.about__title {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: var(--font-header);
+}
